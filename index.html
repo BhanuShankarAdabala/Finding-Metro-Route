@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochi Metro Route Finder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Vis.js for graph rendering -->
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kochi Metro Route Finder</h1>
+        </header>
+        <main>
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="source">Source Station:</label>
+                    <select id="source"></select>
+                </div>
+                <div class="form-group">
+                    <label for="destination">Destination Station:</label>
+                    <select id="destination"></select>
+                </div>
+                <button id="find-path-btn" class="find-path-btn">Find Shortest Path</button>
+            </div>
+            <!-- Results Container -->
+            <div id="results" class="results-container">
+                <h2>Route Results</h2>
+                <p id="path-result">Shortest Path: </p>
+                <p id="distance-result">Total Distance: </p>
+            </div>
+
+            <!-- Graph Container for Vis.js visualization -->
+            <div id="graph" style="height: 500px; border: 1px solid #c11616;"></div>
+            <div class="watermark">ABS</div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Kochi Metro Route Finder. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- D3.js for map rendering -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Link to the JavaScript file for the route finder -->
+    <script src="script.js"></script>
+</body>
+</html>
